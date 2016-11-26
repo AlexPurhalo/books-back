@@ -3,5 +3,9 @@ class Authors < Grape::API
     get '/', rabl: 'authors/index' do
       @authors = Author.all
     end
+
+    get '/:id', rabl: 'authors/show' do
+      @author = Author.find(params[:id])
+    end
   end
 end
