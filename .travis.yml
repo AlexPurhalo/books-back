@@ -1,0 +1,15 @@
+sudo: false
+
+language: ruby
+
+rvm:
+  - 2.3.1
+
+before_install:
+  - gem install bundler -v 1.13.2
+  - gem install foreman -v 0.82.0
+  - gem install grape -v 0.18.0
+  - gem install rspec -v 3.5.0
+
+script:
+  - "rspec"

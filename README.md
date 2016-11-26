@@ -7,3 +7,8 @@
     <li>$ bundle install</li>
     <li>$ foreman start</li>
 </ul>
+
+<h3>Continuous Integration</h3>
+<ul>
+    <li><a href="https://travis-ci.org/AlexPurhalo/books-back">Travis CI for repository</a></li>
+</ul>
