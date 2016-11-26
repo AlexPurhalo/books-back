@@ -20,3 +20,5 @@ group :test do
   gem 'rspec', '~> 3.5'
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 end
+
+gem 'newrelic_rpm', '~> 3.17', '>= 3.17.1.326'

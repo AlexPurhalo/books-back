@@ -1,0 +1,22 @@
+common: &default_settings
+  license_key: a5ace5af83cf7549f96d244ad1abd135ec966db1
+
+  app_name: books-back
+  log_level: info
+
+
+development:
+  <<: *default_settings
+  app_name: books-back
+  developer_mode: true
+
+test:
+  <<: *default_settings
+  monitor_mode: false
+
+staging:
+  <<: *default_settings
+  app_name: books-back
+
+production:
+  <<: *default_settings
