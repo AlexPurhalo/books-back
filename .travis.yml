@@ -12,4 +12,5 @@ before_install:
   - gem install rspec -v 3.5.0
 
 script:
+  - "bundle exec rake db:migrate RACK_ENV=test"
   - "rspec"
