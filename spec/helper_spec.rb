@@ -7,7 +7,7 @@ Bundler.require :test
 
 require 'rspec'
 require 'rack/test'
-
+require 'database_cleaner'
 require './app/core'
 
 RSpec.configure do |config|
@@ -15,4 +15,15 @@ RSpec.configure do |config|
 
   config.color = true
   config.formatter = :documentation
+
+  config.before(:suite) do
+    ActiveRecord::Base.logger = nil
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+end
+
+Rabl.configure do |config|
+  config.include_json_root = false
+  config.include_child_root = false
 end

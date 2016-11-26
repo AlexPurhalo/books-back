@@ -9,7 +9,7 @@ describe 'GET authors' do
     get '/authors'
   end
 
-  it 'renders a message about the authors list' do
+  it 'renders a message about authors list' do
     expect(last_response.body).to eq({ message: 'Should renders the authors list' }.to_json)
   end
 
