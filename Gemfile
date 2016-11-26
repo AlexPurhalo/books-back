@@ -15,6 +15,8 @@ gem 'grape-rabl', '~> 0.4.2', require: 'grape/rabl'
 
 gem 'foreman', '~> 0.82.0'
 
+gem 'rack-cors', '~> 0.4.0', :require => 'rack/cors'
+
 group :test do
   gem 'rack-test', '~> 0.6.3', require: 'rack/test'
   gem 'rspec', '~> 3.5'
