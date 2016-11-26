@@ -1,7 +1,7 @@
 class Genres < Grape::API
   resources :genres do
     get '/' do
-      { message: 'Should renders the genres list' }
+      @genres = Genre.all
     end
   end
 end

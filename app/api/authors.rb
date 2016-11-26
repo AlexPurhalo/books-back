@@ -1,7 +1,7 @@
 class Authors < Grape::API
   resources :authors do
-    get '/' do
-      { message: 'Should renders the authors list' }
+    get '/', rabl: 'authors/index' do
+      @authors = Author.all
     end
   end
 end
