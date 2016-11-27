@@ -7,5 +7,16 @@ class Books < Grape::API
     get '/:id', rabl: 'books/show' do
       @book = Book.find(params[:id])
     end
+
+    post '/' do
+      @book = Book.new params
+      @book.save
+      @book
+    end
+
+    put '/:id' do
+      @book = Book.find(params[:id])
+      @book.update(params)
+    end
   end
 end

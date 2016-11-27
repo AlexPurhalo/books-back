@@ -1,6 +1,6 @@
 collection @book
 
-attribute :id, :title, :brief
+attribute :id, :title, :brief, :cover
 
 child :authors do |author|
   attribute :id, :name
