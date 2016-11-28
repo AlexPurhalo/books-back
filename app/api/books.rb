@@ -25,5 +25,11 @@ class Books < Grape::API
       @book = Book.find(params[:id])
       @book.update(params)
     end
+
+    delete '/:id' do
+      @book = Book.find(params[:id])
+      @book.destroy
+      'was destoyed'
+    end
   end
 end

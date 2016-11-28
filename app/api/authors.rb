@@ -7,5 +7,11 @@ class Authors < Grape::API
     get '/:id', rabl: 'authors/show' do
       @author = Author.find(params[:id])
     end
+
+    delete ':id' do
+      @author = Author.find(params[:id])
+      @author.destroy
+      'was destoryed'
+    end
   end
 end
